@@ -49,7 +49,9 @@
                             <outlet property="delegate" destination="YL7-f6-HJ9" id="ncd-OW-upU"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="FAVORITE PLACES" id="bxc-NZ-G4Y"/>
+                    <navigationItem key="navigationItem" title="FAVORITE PLACES" id="bxc-NZ-G4Y">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="plus" catalog="system" id="MvH-fu-91m"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z2J-43-MFG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -89,4 +91,7 @@
         </scene>
     </scenes>
     <color key="tintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+    <resources>
+        <image name="plus" catalog="system" width="128" height="113"/>
+    </resources>
 </document>
