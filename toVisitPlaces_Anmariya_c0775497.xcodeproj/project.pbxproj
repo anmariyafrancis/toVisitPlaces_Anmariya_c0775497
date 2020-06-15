@@ -13,6 +13,8 @@
 		CCCF62592497F4D3005A752A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCCF62572497F4D3005A752A /* Main.storyboard */; };
 		CCCF625B2497F4D5005A752A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCCF625A2497F4D5005A752A /* Assets.xcassets */; };
 		CCCF625E2497F4D5005A752A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCCF625C2497F4D5005A752A /* LaunchScreen.storyboard */; };
+		CCF95C8D249838DD006B3F10 /* FavouritePlacesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF95C8C249838DD006B3F10 /* FavouritePlacesTableViewController.swift */; };
+		CCF95C9324983BE3006B3F10 /* FavouritePlaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF95C9224983BE3006B3F10 /* FavouritePlaces.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		CCCF625A2497F4D5005A752A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CCCF625D2497F4D5005A752A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CCCF625F2497F4D5005A752A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CCF95C8C249838DD006B3F10 /* FavouritePlacesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritePlacesTableViewController.swift; sourceTree = "<group>"; };
+		CCF95C9224983BE3006B3F10 /* FavouritePlaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritePlaces.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 				CCCF625A2497F4D5005A752A /* Assets.xcassets */,
 				CCCF625C2497F4D5005A752A /* LaunchScreen.storyboard */,
 				CCCF625F2497F4D5005A752A /* Info.plist */,
+				CCF95C8C249838DD006B3F10 /* FavouritePlacesTableViewController.swift */,
+				CCF95C9224983BE3006B3F10 /* FavouritePlaces.swift */,
 			);
 			path = toVisitPlaces_Anmariya_c0775497;
 			sourceTree = "<group>";
@@ -138,9 +144,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCF95C9324983BE3006B3F10 /* FavouritePlaces.swift in Sources */,
 				CCCF62562497F4D3005A752A /* ViewController.swift in Sources */,
 				CCCF62522497F4D3005A752A /* AppDelegate.swift in Sources */,
 				CCCF62542497F4D3005A752A /* SceneDelegate.swift in Sources */,
+				CCF95C8D249838DD006B3F10 /* FavouritePlacesTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

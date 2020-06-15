@@ -14,7 +14,12 @@ class FavouritePlaces{
     var latitude:Double
     var longitude:Double
     
-    init(placeName:String,country:String,postalCode:String,latitude:Double,longitude:Double) {
-    
+    init(placeName:String,country:String,postalCode:String,latitude:Double,longitude:Double){
+        
+        self.placeName=placeName
+        self.country=country
+        self.postalCode=postalCode
+        self.latitude=latitude
+        self.longitude=longitude
     }
 }
