@@ -59,7 +59,7 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
     
     func getDataFilePath() -> String {
         let documentPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
-        let filePath = documentPath.appending("/FavouritePlaces.txt")
+        let filePath = documentPath.appending("/Favorite_Places.txt")
         return filePath
     }
     
@@ -104,3 +104,6 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
     }
     
 }
+
+
+

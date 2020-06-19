@@ -7,19 +7,15 @@
 //
 
 import Foundation
-
-class FavouritePlace{
     
+    class FavouritePlace {
+    var latitude: Double
+    var longitude: Double
+    var address: String
     
-    var latitude:Double
-    var longitude:Double
-    var address:String
-    
-    init(latitude:Double,longitude:Double,address:String){
-        
-        
-        self.latitude=latitude
-        self.longitude=longitude
-        self.address=address
+    init(latitude: Double, longitude: Double, address: String) {
+        self.latitude = latitude
+        self.longitude = longitude
+        self.address = address
     }
 }

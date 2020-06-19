@@ -48,7 +48,7 @@ class MapViewController: UIViewController {
     
     func getDataFilePath() -> String {
                let documentPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
-               let filePath = documentPath.appending("/FavouritePlaces.txt")
+               let filePath = documentPath.appending("/Favorite_Places.txt")
                return filePath
            }
         
@@ -151,7 +151,7 @@ class MapViewController: UIViewController {
             let touchPoint = sender.location(in: mapView)
             let coordinate = mapView.convert(touchPoint, toCoordinateFrom: mapView)
             let annotation = MKPointAnnotation()
-            annotation.title = "My destination"
+            annotation.title = "Destination is here"
             annotation.coordinate = coordinate
             mapView.addAnnotation(annotation)
             
@@ -219,7 +219,7 @@ class MapViewController: UIViewController {
                     
                     let distance = route.distance
                     
-                    let alert = UIAlertController(title: "Let's go", message: "Distnace : \(distance) KM", preferredStyle: .alert)
+                    let alert = UIAlertController(title: "How far you are..", message: "Distnace : \(distance) KM", preferredStyle: .alert)
                            let cancelAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
                            alert.addAction(cancelAction)
                     self.present(alert, animated: true, completion: nil)
@@ -296,11 +296,11 @@ class MapViewController: UIViewController {
                }
         //MARK: - callout accessory control tapped
         func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
-            let alertController = UIAlertController(title: "Your Favorite Place", message: "Are you sure you want to add this place to your Favorite Places?", preferredStyle: .actionSheet)
+            let alertController = UIAlertController(title: "Add your favourite place", message: "Do you want to add this place to your favourite places?", preferredStyle: .actionSheet)
             alertController.addAction(UIAlertAction(title: "Yes", style:  .default, handler: { (UIAlertAction) in
                                self.geocode()
                                }))
-            alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+            alertController.addAction(UIAlertAction(title: "No", style: .cancel))
             self.present(alertController, animated: true, completion: nil)
         }
         
