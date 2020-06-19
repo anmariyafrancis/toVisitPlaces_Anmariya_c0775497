@@ -13,8 +13,8 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
     let userDefault = UserDefaults.standard
     
     @IBOutlet weak var tblFavPlaces: UITableView!
-    var favoritePlaces: [FavoritePlace]?
-    var deleteArray: [FavoritePlace]?
+    var favoritePlaces: [FavouritePlace]?
+    var deleteArray: [FavouritePlace]?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,7 +38,7 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let favPlace = favoritePlaces![indexPath.row]
-        let cell = tableView.dequeueReusableCell(withIdentifier: "favPlaceCell") as! FavPlacesTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "favPlaceCell") as! FavouritePlacesTableViewCell
         cell.textLabel?.text = favPlace.address
         cell.detailTextLabel?.text = "Lat: \(favPlace.latitude) Lang: \(favPlace.longitude)"
         
@@ -59,12 +59,12 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
     
     func getDataFilePath() -> String {
         let documentPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
-        let filePath = documentPath.appending("/Favorite_Places.txt")
+        let filePath = documentPath.appending("/FavouritePlaces.txt")
         return filePath
     }
     
     func loadData() {
-        favoritePlaces = [FavoritePlace]()
+        favoritePlaces = [FavouritePlace]()
         let filepath = getDataFilePath()
         
         if FileManager.default.fileExists(atPath: filepath) {
@@ -74,7 +74,7 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
                 for content in contentArray {
                     let favPlaceContent = content.components(separatedBy: ",")
                     if favPlaceContent.count == 3 {
-                        let favPlace = FavoritePlace(latitude: Double(favPlaceContent[0]) ?? 0.0, longitude: Double(favPlaceContent[1]) ?? 0.0, address: favPlaceContent[2] )
+                        let favPlace = FavouritePlace(latitude: Double(favPlaceContent[0]) ?? 0.0, longitude: Double(favPlaceContent[1]) ?? 0.0, address: favPlaceContent[2] )
                         favoritePlaces?.append(favPlace)
                     }
                 }

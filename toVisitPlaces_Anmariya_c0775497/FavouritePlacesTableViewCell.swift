@@ -9,7 +9,8 @@
 import UIKit
 
 class FavouritePlacesTableViewCell: UITableViewCell {
-
+    
+    @IBOutlet weak var lblFavPlace: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

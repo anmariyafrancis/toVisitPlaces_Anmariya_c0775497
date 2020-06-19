@@ -6,20 +6,20 @@
 //  Copyright © 2020 user176498. All rights reserved.
 //
 
-class FavouritePlaces{
+import Foundation
+
+class FavouritePlace{
     
-    var placeName:String
-    var country:String
-    var postalCode:String
+    
     var latitude:Double
     var longitude:Double
+    var address:String
     
-    init(placeName:String,country:String,postalCode:String,latitude:Double,longitude:Double){
+    init(latitude:Double,longitude:Double,address:String){
         
-        self.placeName=placeName
-        self.country=country
-        self.postalCode=postalCode
+        
         self.latitude=latitude
         self.longitude=longitude
+        self.address=address
     }
 }
